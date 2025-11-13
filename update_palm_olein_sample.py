@@ -146,7 +146,7 @@ def fetch_daily(date_str):
         "callback": "",
         "reportName": "DAILYPOSITION",
         "columns": "ALL",
-        "filter": f'(TRADE_MARKET_CODE="{TRADE_MARKET_CODE}")(TRADE_CODE="{TRADE_CODE}")(ORG_CODE="{ORG_CODE}")(TRADE_DATE=\'{date_str}\')',
+        "filter": f'(MARKET_CODE="{MARKET_CODE}")(CODE="{CODE}")(ORG="{ORG}")(TRADE_DATE=\'{date_str}\')',
         "sortColumns": "SECURITY_CODE",
         "sortTypes": "1",
         "pageNumber": "1",
@@ -308,4 +308,5 @@ else:
     print("⚠ No new data found.")
 
 if __name__ == "__main__":
+
     main()
